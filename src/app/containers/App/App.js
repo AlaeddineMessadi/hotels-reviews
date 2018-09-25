@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Button from "../../componenets/UI/Button/Button";
 import Header from "../../componenets/Header/Header";
+import Card from "../../componenets/Card/Card";
 
 import classes from "./App.css";
 
@@ -15,12 +16,12 @@ export default class App extends Component {
   render() {
     return (
       <div className={classes.container}>
-      <Header>
-      <Button text="Load Hotels" onclick={this.loadHotels} />
-
-      </Header>
+        <Header>
+          <Button text="Load Hotels" onclick={this.loadHotels} />
+        </Header>
         <div className={classes.container}>
-        <p>{this.state.message}</p>
+          <Card />
+          <p>{this.state.message}</p>
         </div>
       </div>
     );
