@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Button from "../../componenets/UI/Button/Button";
+import Header from "../../componenets/Header/Header";
 
 import classes from "./App.css";
 
@@ -14,8 +15,13 @@ export default class App extends Component {
   render() {
     return (
       <div className={classes.container}>
-        <Button text="Load Hotels" onclick={this.loadHotels} />
+      <Header>
+      <Button text="Load Hotels" onclick={this.loadHotels} />
+
+      </Header>
+        <div className={classes.container}>
         <p>{this.state.message}</p>
+        </div>
       </div>
     );
   }
