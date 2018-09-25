@@ -10,7 +10,7 @@ import classes from './Card.css';
 const card = ({ hotel }) => {
   return (
     <div className={ classes.card }>
-      <Image image={ hotel.images[0] } alt={ hotel.name } />
+      <Image images={ hotel.images } alt={ hotel.name } />
       <InfoBox title={ hotel.name } city={ hotel.city } rating={ parseRating(hotel.rating) } />
     </div>
   )

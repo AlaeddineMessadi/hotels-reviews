@@ -1188,6 +1188,12 @@ detect-libc@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
 
+dom7@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.2.tgz#a914070c0abe8465384997a9c4f34475f67f75bd"
+  dependencies:
+    ssr-window "^1.0.1"
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -2844,6 +2850,10 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
+ssr-window@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
@@ -2943,6 +2953,13 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
   dependencies:
     has-flag "^3.0.0"
+
+swiper@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.4.1.tgz#9eeca17c5bfa4a27663963b2640119e5fc668255"
+  dependencies:
+    dom7 "^2.1.2"
+    ssr-window "^1.0.1"
 
 tapable@^0.1.8, tapable@~0.1.8:
   version "0.1.10"
@@ -3103,6 +3120,10 @@ utils-merge@1.0.1:
 uuid@^3.0.1:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+
+vanilla-lazyload@^10.17.0:
+  version "10.17.0"
+  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-10.17.0.tgz#e8db81ede5596722757f9bb593d123b598f9cf09"
 
 vary@~1.1.2:
   version "1.1.2"
