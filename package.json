@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Alaeddine Messadi",
   "license": "MIT",
+  "scripts": {
+    "start": "npm run build",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && cp src/index.html dist/index.html"
+  },
   "dependencies": {
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
@@ -16,5 +21,5 @@
     "babel-preset-stage-2": "^6.11.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
-}
+  }
 }
