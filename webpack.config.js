@@ -1,9 +1,9 @@
-var path = require("path");
+const path = require("path");
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+const DIST_DIR = path.resolve(__dirname, "dist");
+const SRC_DIR = path.resolve(__dirname, "src");
 
-var config = {
+const config = {
   entry: SRC_DIR + "/app/index.js",
   output: {
     path: DIST_DIR + "/app",
@@ -29,9 +29,10 @@ var config = {
         loader: "css-loader",
         query: {
           modules: true,
+          sourceMap: true,
           localIdentName: "[name]__[local]___[hash:base64:5]"
         }
-      }
+      },
     ]
   }
 };
