@@ -1,0 +1,26 @@
+.headerInfo {
+    display: flex;
+    flex-flow: row;
+    padding: 1rem;
+}
+
+.titleContainer {
+    flex-grow: 2;
+}
+
+.titleContainer h3{
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.titleContainer span{
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.stars {
+    flex-grow: 1;
+    text-align: right;
+}

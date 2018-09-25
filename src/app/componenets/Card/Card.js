@@ -1,12 +1,15 @@
 import React from 'react';
 
+import Image from './Image/Image';
+import InfoBox from './InfoBox/InfoBox';
+
 import styles from './Card.css';
 
 const card = (props) => {
   return (
     <div className={styles.card}>
-      <div>images left</div>
-      <div>information right</div>
+      <Image image="" alt=""/>
+      <InfoBox/>
     </div>
   )
 }

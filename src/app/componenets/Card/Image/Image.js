@@ -12,7 +12,7 @@ const image = props => {
     <div className={styles.image}>
       {props.image ? (
         <img src={props.image} alt={props.alt ? props.alt : "Hotel image"} />
-      ) : null}
+      ) : 'null'}
     </div>
   );
 };

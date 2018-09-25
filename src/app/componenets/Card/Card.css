@@ -1,8 +1,9 @@
 .card {
-    width: 100%;
-    border: 1px solid #aaaaaa;
-    border-radius: 5px;
-    min-height: 100px;
-    display: flex;
-    flex-flow: row;
+  width: 100%;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  min-height: 100px;
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
 }
