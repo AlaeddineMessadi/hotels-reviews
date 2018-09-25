@@ -4,15 +4,26 @@
   padding: 10px;
 }
 
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width: 480px) {
   .container {
     width: 85%;
   }
 }
-  
 
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 768px) {
   .container {
     width: 80%;
   }
 }
+
+/* @media only screen and (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width: 1088px) {
+  .container {
+    width: 1080px;
+  }
+} */

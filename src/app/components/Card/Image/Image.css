@@ -1,8 +1,12 @@
 .image {
   background-color: #e5e5e5;
   border-right: 1px solid #aaaaaa;
-  flex-grow:1;
-  min-width: 70px;
+  position: relative;
+  display: block;
+  /* padding-bottom: 75%; */
+  overflow: hidden;
+  min-width: 300px;
+  flex-grow: 2;
 }
 
 .image img {
@@ -10,16 +14,14 @@
   height: auto;
 }
 
+/* @media only screen and (min-width: 480px) {
+  .image {
+    min-width: 150px;
+  }
+}
 
-@media only screen and (min-width : 480px) {
-    .image {
-        min-width: 150px;
-    }
+@media only screen and (min-width: 768px) {
+  .image {
+    min-width: 200px;
   }
-    
-  
-  @media only screen and (min-width : 768px) {
-    .image {
-        min-width: 200px;
-    }
-  }
+} */

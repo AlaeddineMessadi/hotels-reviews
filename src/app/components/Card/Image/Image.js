@@ -9,10 +9,10 @@ import styles from "./Image.css";
 
 const image = props => {
   return (
-    <div className={styles.image}>
-      {props.image ? (
-        <img src={props.image} alt={props.alt ? props.alt : "Hotel image"} />
-      ) : 'null'}
+    <div className={ styles.image }>
+      { props.image ? (
+        <img src={ props.image } alt={ props.alt ? props.alt : "Hotel image" } />
+      ) : 'null' }
     </div>
   );
 };

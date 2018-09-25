@@ -1,15 +1,14 @@
 .card {
-  width: 100%;
   border: 1px solid #aaaaaa;
   border-radius: 5px;
   min-height: 100px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   align-items: stretch;
+  margin-bottom: 1rem;
 }
 
 .reviews {
-  /* flex-grow: 3; */
   flex-basis: 100%;
   flex-flow: column;
   background-color: #bbbbbb;
@@ -26,4 +25,10 @@
   color: #aaaaaa;
   height: 2px;
   width: 90%;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .card {
+    flex-wrap: wrap;
+  }
 }
