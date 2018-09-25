@@ -21,12 +21,11 @@ export default class App extends Component {
         </Header>
         <div className={classes.container}>
           <Card
-          image={null}
-          title={"Hotel Name"}
-          city={"City Country"}
-          rating={3} 
+            image={null}
+            title={"Hotel Name"}
+            city={"City Country"}
+            rating={3}
           />
-          <p>{this.state.message}</p>
         </div>
       </div>
     );

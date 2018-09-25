@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Button from "../../UI/Button/Button";
-import HeaderInfo from "./HeaderInfo/HeaderInfo";
+import HeaderInfo from './HeaderInfo/HeaderInfo';
+import FooterInfo from './FooterInfo/FooterInfo';
 import classes from "./InfoBox.css";
 
 const InfoBox = props => {
@@ -13,9 +13,7 @@ const InfoBox = props => {
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s.
       </p>
-      <footer>
-        <Button text="Show Reviews" onClick={null} />
-      </footer>
+      <FooterInfo price={200} date={new Date().toLocaleString('de-DE', { timeZone: 'GMT' })} />
     </div>
   );
 };
