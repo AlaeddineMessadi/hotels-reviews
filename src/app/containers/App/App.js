@@ -1,31 +1,45 @@
 import React, { Component } from "react";
+import ApiService from '../../services/ApiService';
 
-import Button from "../../componenets/UI/Button/Button";
-import Header from "../../componenets/Header/Header";
-import Card from "../../componenets/Card/Card";
+import Button from "../../components/UI/Button/Button";
+import Header from "../../components/Header/Header";
+import Card from "../../components/Card/Card";
 
 import classes from "./App.css";
 
 export default class App extends Component {
-  state = { message: "Fist message" };
+  state = { hotels: [] };
 
   loadHotels = () => {
-    return [];
+    const result = [];
+
+    ApiService.get(`/hotels`, { count: 5 }, (status, data) => {
+      this.setState({
+        hotels:
+          [
+            ...this.state.hotels,
+            ...data
+          ]
+      });
+      console.log(this.state.hotels)
+    })
+
   };
 
   render() {
     return (
-      <div className={classes.container}>
+      <div className={ classes.container }>
         <Header>
-          <Button text="Load Hotels" onclick={this.loadHotels} />
+          <Button text="Load Hotels" onClick={ this.loadHotels } />
         </Header>
-        <div className={classes.container}>
-          <Card
-            image={null}
-            title={"Hotel Name"}
-            city={"City Country"}
-            rating={3}
-          />
+        <div className={ classes.container }>
+          {
+            this.state.hotels.map((hotel, index) => (
+              <Card key={ hotel.id } hotel={ hotel }
+              />
+            ))
+          }
+
         </div>
       </div>
     );

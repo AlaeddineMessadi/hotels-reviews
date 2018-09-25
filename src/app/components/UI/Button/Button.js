@@ -4,8 +4,8 @@ import styles from "./Button.css";
 
 const button = props => {
   return (
-    <button className={styles.button} onClick={props.onClick}>
-      {props.text}
+    <button className={ styles.button } onClick={ () => props.onClick() }>
+      { props.text }
     </button>
   );
 };

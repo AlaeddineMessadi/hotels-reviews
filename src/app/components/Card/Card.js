@@ -6,12 +6,12 @@ import Review from './Review/Review';
 
 import classes from './Card.css';
 
-const card = (props) => {
+const card = ({hotel}) => {
   return (
     <div className={ classes.card }>
       <Image image="" alt="" />
-      <InfoBox title={ props.title } city={ props.city } rating={ props.rating } />
-      {/* <break></break> */ }
+      <InfoBox title={ hotel.name } city={ hotel.city } rating={ Math.round(hotel.rating) } />
+
       <div className={ classes.reviews }>
         <Review status="Negative" author="Alex" review="Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
