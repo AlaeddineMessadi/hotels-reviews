@@ -1,6 +1,7 @@
 .infoBox {
   background-color: #f6f6f6;
-  flex-grow:2;
+  max-width: 60%;
+  flex-grow: 2;
 }
 
 .description {

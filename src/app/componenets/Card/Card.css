@@ -4,6 +4,26 @@
   border-radius: 5px;
   min-height: 100px;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   align-items: stretch;
+}
+
+.reviews {
+  /* flex-grow: 3; */
+  flex-basis: 100%;
+  flex-flow: column;
+  background-color: #bbbbbb;
+  border-color: #aaaaaa;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  flex-basis: 100%;
+}
+
+.break {
+  margin: auto;
+  border: none;
+  background-color: #aaaaaa;
+  color: #aaaaaa;
+  height: 2px;
+  width: 90%;
 }

@@ -1,5 +1,52 @@
 .review {
-    min-height: 200px;
-    padding: 2rem;
-    background-color: #aaaaaa;
+    min-height: 100px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-flow: row;
+}
+
+.review>div {
+    align-self: center;
+    margin: 1rem;
+}
+
+.review h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+}
+
+.review p {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 1rem 0.5rem;
+}
+
+.sign {
+    display: block;
+    background-color: #e5e5e5;
+    border: 1px solid #aaaaaa;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.plus::after {
+    content: '+';
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minus::after {
+    content: '-';
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
