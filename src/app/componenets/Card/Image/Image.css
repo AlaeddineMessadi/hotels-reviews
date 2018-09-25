@@ -2,9 +2,24 @@
   background-color: #e5e5e5;
   border-right: 1px solid #aaaaaa;
   flex-grow:1;
+  min-width: 70px;
 }
 
 .image img {
   width: 100%;
   height: auto;
 }
+
+
+@media only screen and (min-width : 480px) {
+    .image {
+        min-width: 150px;
+    }
+  }
+    
+  
+  @media only screen and (min-width : 768px) {
+    .image {
+        min-width: 200px;
+    }
+  }

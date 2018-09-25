@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import Button from '../../UI/Button/Button';
-import HeaderInfo from '../HeaderInfo/HeaderInfo';
-import classes from './InfoBox.css';
+import Button from "../../UI/Button/Button";
+import HeaderInfo from "./HeaderInfo/HeaderInfo";
+import classes from "./InfoBox.css";
 
 const InfoBox = props => {
   return (
     <div className={classes.infoBox}>
-      <HeaderInfo title="Hotel Title" city="City - country"/>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <HeaderInfo title={props.title} city={props.city} rating={props.rating} />
+      <p className={classes.description}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s.
+      </p>
       <footer>
         <Button text="Show Reviews" onClick={null} />
       </footer>

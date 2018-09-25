@@ -20,7 +20,12 @@ export default class App extends Component {
           <Button text="Load Hotels" onclick={this.loadHotels} />
         </Header>
         <div className={classes.container}>
-          <Card />
+          <Card
+          image={null}
+          title={"Hotel Name"}
+          city={"City Country"}
+          rating={3} 
+          />
           <p>{this.state.message}</p>
         </div>
       </div>

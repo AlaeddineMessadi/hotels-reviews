@@ -9,7 +9,7 @@ const card = (props) => {
   return (
     <div className={styles.card}>
       <Image image="" alt=""/>
-      <InfoBox/>
+      <InfoBox title={props.title} city={props.city} rating={props.rating}/>
     </div>
   )
 }

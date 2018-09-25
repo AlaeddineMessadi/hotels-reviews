@@ -2,3 +2,7 @@
   background-color: #f6f6f6;
   flex-grow:2;
 }
+
+.description {
+  padding: 0 1rem 1rem 1rem;
+}
