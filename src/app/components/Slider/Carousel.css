@@ -4,8 +4,18 @@
   position: relative;
   display: block;
   overflow: hidden;
-  width: 100%;
-  min-width: 300px;
-  min-height: 240px;
-  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    flex: 0 0 315px;
+    height: 236px;
+  }
+}
+
+@media (min-width: 1088px) {
+  .carousel {
+    flex: 0 0 420px;
+    height: 315px;
+  }
 }

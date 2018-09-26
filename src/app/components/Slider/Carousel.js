@@ -4,14 +4,22 @@ import ImageSlide from "./ImageSlide/ImageSlide";
 
 import classes from "./Carousel.css";
 
+/**
+ * dummy pictures for testing
+ * The are some issue with the images' urls in the api response
+ * uncomment this section and the first line in the render method 
+ */
 const Urlimages = [
-  "https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781",
-  "https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900",
-  "https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328",
-  "https://i.pinimg.com/736x/07/c3/45/07c345d0eca11d0bc97c894751ba1b46.jpg",
-  "https://ehealthforum.com/health/images/avatars/11699147425707699031013.jpeg"
+  "https://loremflickr.com/640/480/germany",
+  "https://loremflickr.com/640/480/brazil",
+  "https://loremflickr.com/640/480/usa",
+  "https://loremflickr.com/640/480/india",
+  "https://loremflickr.com/640/480/japan",
 ];
 
+/**
+ * Carousel Component
+ */
 export default class Carousel extends Component {
   state = {
     currentImageIndex: 0
@@ -41,18 +49,18 @@ export default class Carousel extends Component {
   };
 
   render() {
-	//   const Urlimages = this.props.images;
+    //   const Urlimages = this.props.images;
     return (
-      <div className={classes.carousel}>
-        <ImageSlide url={Urlimages[this.state.currentImageIndex]} />
+      <div className={ classes.carousel }>
+        <ImageSlide url={ Urlimages[this.state.currentImageIndex] } />
         <Arrow
           direction="left"
-          clickFunction={this.previousSlide}
+          clickFunction={ this.previousSlide }
           glyph="&#9664;"
         />
         <Arrow
           direction="right"
-          clickFunction={this.nextSlide}
+          clickFunction={ this.nextSlide }
           glyph="&#9654;"
         />
       </div>

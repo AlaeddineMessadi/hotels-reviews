@@ -2,14 +2,22 @@
     flex-grow: 2;
 }
 
-.titleContainer h3{
-    font-size: 1.3rem;
+.titleContainer h3 {
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-transform: capitalize;
 }
 
-.titleContainer span{
+.titleContainer span {
     font-size: 0.9rem;
     font-weight: 300;
     letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .titleContainer h3 {
+        margin-bottom: 0;
+    }
 }

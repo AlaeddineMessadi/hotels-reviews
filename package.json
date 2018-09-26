@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "moment": "^2.22.2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "style-loader": "^0.23.0",
