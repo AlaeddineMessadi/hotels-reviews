@@ -5,8 +5,12 @@ import Carousel from "../Carousel/Carousel";
 import InfoBox from "./InfoBox/InfoBox";
 import Review from "./Review/Review";
 
+// Styles
 import classes from "./Card.css";
 
+/**
+ * Card Component
+ */
 export default class card extends Component {
   state = {
     reviews: [],
@@ -14,10 +18,13 @@ export default class card extends Component {
     toggle: false
   };
 
+  /**
+   * Fetch Reviews of a Hotel from the API
+   * and update state
+   */
   fetchReviews = () => {
     if (!this.state.fetched) {
-      ApiService.get(
-        `/reviews`,
+      ApiService.get(`/reviews`,
         { hotel_id: this.props.hotel.id },
         (status, data) => {
           this.setState({
@@ -28,6 +35,7 @@ export default class card extends Component {
       );
     }
 
+    // Update state
     this.setState({ toggle: !this.state.toggle });
   };
 
@@ -46,6 +54,10 @@ export default class card extends Component {
         </div>
 
         <div className={ `${classes.reviews} ${toggleReviews}` }>
+          {/*
+             Loop through the reviews and insert in between a break element
+             except the first and the last reviews
+           */}
           { this.state.reviews.map(
             (review, i) =>
               i < reviewsLength - 1

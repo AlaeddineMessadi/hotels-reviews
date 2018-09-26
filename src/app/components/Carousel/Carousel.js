@@ -5,10 +5,11 @@ import ImageSlide from "./ImageSlide/ImageSlide";
 /**
  * dummy pictures for testing
  * The are some issue with the images' urls in the api response
- * uncomment this section and the first line in the render method 
+ * uncomment this section and change all "this.props.images" to IMAGE_URLS
  */
 import { IMAGE_URLS } from '../../Utils/Constants';
 
+// Styles
 import classes from "./Carousel.css";
 
 
@@ -20,6 +21,9 @@ export default class Carousel extends Component {
     currentImageIndex: 0,
   };
 
+  /**
+   * Previous Slide functionality 
+   */
   previousSlide = () => {
     const index =
       this.state.currentImageIndex === 0
@@ -31,6 +35,9 @@ export default class Carousel extends Component {
     });
   };
 
+  /**
+   * Next Slide functionality 
+   */
   nextSlide = () => {
     const lastIndex = this.props.images.length - 1;
     const index =
@@ -44,7 +51,6 @@ export default class Carousel extends Component {
   };
 
   render() {
-    //   const Urlimages = this.props.images;
     return (
       <div className={ classes.carousel }>
         <ImageSlide url={ this.props.images[this.state.currentImageIndex] } />

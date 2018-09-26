@@ -1,8 +1,14 @@
 import React from 'react';
 
+// Styles
 import classes from './Review.css';
 
-const review = ({positive, author, comment}) => {
+/**
+ * Review Component
+ * 
+ * @param {positive, author, comment} param0 
+ */
+const review = ({ positive, author, comment }) => {
   const sign = (positive) ? classes.plus : classes.minus;
   return (
     <div className={ classes.review }>

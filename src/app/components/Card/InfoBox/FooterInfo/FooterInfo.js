@@ -2,8 +2,13 @@ import React, { Component } from "react";
 
 import Button from "../../../UI/Button/Button";
 import { timeParserDE } from '../../../../Utils/Utils';
+
+// Styles
 import classes from "./FooterInfo.css";
 
+/**
+ * Footer Info Component for the InfoBox
+ */
 export default class footerInfo extends Component {
   state = { buttonText: "Show Reviews" }
 
@@ -14,7 +19,7 @@ export default class footerInfo extends Component {
   }
 
   render() {
-    const { price, start, end, fetch } = this.props;
+    const { price, start, end } = this.props;
     return (
       <footer className={ classes.footerInfo }>
 
