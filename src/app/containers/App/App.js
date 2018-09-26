@@ -8,18 +8,20 @@ import Card from "../../components/Card/Card";
 import classes from "./App.css";
 
 export default class App extends Component {
-  state = { hotels: [] };
+  state = { hotels: [], error: false };
 
   loadHotels = () => {
-    ApiService.get(`/hotels`, { count: 5 }, (status, data) => {
+    ApiService.get(`/hotels`, { count: 1 }, (status, data) => {
       this.setState({
         hotels:
           [
             ...this.state.hotels,
             ...data
-          ]
+          ],
+        error: false
       });
-      console.log(this.state.hotels)
+    }).catch((error) => {
+      this.setState({ error: true })
     })
 
   };
@@ -32,10 +34,10 @@ export default class App extends Component {
         </Header>
         <div className={ classes.container }>
           {
-            this.state.hotels.map((hotel, index) => (
-              <Card key={ hotel.id } hotel={ hotel }
-              />
-            ))
+            !this.state.error ?
+              this.state.hotels.map((hotel, index) => (
+                <Card key={ hotel.id } hotel={ hotel } />
+              )) : <div className={ classes.error }><p>An error occurred</p></div>
           }
 
         </div>

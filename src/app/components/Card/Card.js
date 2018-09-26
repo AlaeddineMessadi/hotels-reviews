@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { calcStatus, parseRating } from "../../Utils/Utils";
+
 import ApiService from "../../services/ApiService";
 import Carousel from "../Slider/Carousel";
 import InfoBox from "./InfoBox/InfoBox";
@@ -36,37 +36,37 @@ export default class card extends Component {
     const toggleReviews = this.state.toggle ? classes.show : classes.hide;
 
     return (
-      <div className={classes.cardContainer}>
-        <div className={classes.card}>
+      <div className={ classes.cardContainer }>
+        <div className={ classes.card }>
           <Carousel
-            images={this.props.hotel.images}
-            alt={this.props.hotel.name}
+            images={ this.props.hotel.images }
+            alt={ this.props.hotel.name }
           />
-          <InfoBox hotel={this.props.hotel} fetch={this.fetchReviews} />
+          <InfoBox hotel={ this.props.hotel } fetch={ this.fetchReviews } />
         </div>
 
-        <div className={`${classes.reviews} ${toggleReviews}`}>
-          {this.state.reviews.map(
+        <div className={ `${classes.reviews} ${toggleReviews}` }>
+          { this.state.reviews.map(
             (review, i) =>
               i < reviewsLength - 1
                 ? [
-                    <Review
-                      key={i}
-                      positive={review.positive}
-                      author={review.name}
-                      comment={review.comment}
-                    />,
-                    <div className={classes.break} />
-                  ]
+                  <Review
+                    key={ i }
+                    positive={ review.positive }
+                    author={ review.name }
+                    comment={ review.comment }
+                  />,
+                  <div className={ classes.break } />
+                ]
                 : [
-                    <Review
-                      key={i}
-                      positive={review.positive}
-                      author={review.name}
-                      comment={review.comment}
-                    />
-                  ]
-          )}
+                  <Review
+                    key={ i }
+                    positive={ review.positive }
+                    author={ review.name }
+                    comment={ review.comment }
+                  />
+                ]
+          ) }
         </div>
       </div>
     );

@@ -4,17 +4,18 @@
   padding: 10px;
 }
 
+.error p {
+  padding: 30px;
+  border: 0.61px solid #aaaaaa;
+  border-radius: 10px;
+  background: #e5e5e5;
+}
+
 @media only screen and (min-width: 480px) {
   .container {
     width: 84%;
   }
 }
-
-/* @media only screen and (min-width: 768px) {
-  .container {
-    width: 80%;
-  }
-} */
 
 @media only screen and (min-width: 768px) {
   .container {

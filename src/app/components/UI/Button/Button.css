@@ -1,18 +1,18 @@
 button {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 15px 40px;
     margin: 0;
     text-decoration: none;
-    border-color: #aaaaaa;
-    border-radius: 5%;
+    border: 0.61px solid #aaaaaa;
+    border-radius: 5px;
     background: #e5e5e5;
+    font-weight: bold;
     cursor: pointer;
     text-align: center;
     transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
-button:hover,
-button:focus {
+button:hover, button:focus {
     background: #e5e5e5;
 }
 

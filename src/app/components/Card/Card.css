@@ -16,25 +16,22 @@
 .reviews {
   flex-basis: 100%;
   flex-flow: column;
-  background-color: #bbbbbb;
-  border-color: #aaaaaa;
+  background-color: #cfcfcf;
+  border: 1px solid #aaaaaa;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   flex-basis: 100%;
   margin-top: -1px;
-  /* overflow:hidden;
-  transform: translateY(-100%);*/
-transition: all .4s ease-in-out; 
+  transition: all .4s ease-in-out;
 }
 
 .show {
   display: block;
 }
 
-.hide{
+.hide {
   display: none;
 }
-
 
 .break {
   margin: auto;
@@ -44,7 +41,6 @@ transition: all .4s ease-in-out;
   height: 2px;
   width: 90%;
 }
-
 
 /* .fadein {
   transform: translateY(0);
@@ -75,7 +71,6 @@ transition: all .4s ease-in-out;
       transform: translateY(auto);
   }
 } */
-
 
 @media only screen and (max-width: 768px) {
   .card {
