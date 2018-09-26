@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import ApiService from "../../services/ApiService";
-import Carousel from "../Slider/Carousel";
+import Carousel from "../Carousel/Carousel";
 import InfoBox from "./InfoBox/InfoBox";
 import Review from "./Review/Review";
 
