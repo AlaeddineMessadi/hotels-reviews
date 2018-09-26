@@ -1,6 +1,6 @@
 .review {
     min-height: 100px;
-    padding: 2rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-flow: row;
 }
@@ -11,7 +11,7 @@
 }
 
 .review h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     padding: 1rem 0.5rem;
 }

@@ -22,10 +22,19 @@
   border-bottom-left-radius: 5px;
   flex-basis: 100%;
   margin-top: -1px;
-  overflow:hidden;
-  transform: translateY(-100%);
-transition: .4s ease-in-out;
+  /* overflow:hidden;
+  transform: translateY(-100%);*/
+transition: all .4s ease-in-out; 
 }
+
+.show {
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
 
 .break {
   margin: auto;
@@ -37,9 +46,9 @@ transition: .4s ease-in-out;
 }
 
 
-.fadein {
+/* .fadein {
   transform: translateY(0);
-}
+} */
 
 /* .fadeout {
   animation-name: fadeOut;

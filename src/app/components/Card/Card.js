@@ -20,7 +20,6 @@ export default class card extends Component {
         `/reviews`,
         { hotel_id: this.props.hotel.id },
         (status, data) => {
-
           this.setState({
             reviews: [...this.state.reviews, ...data],
             fetched: true
@@ -29,12 +28,13 @@ export default class card extends Component {
       );
     }
 
-    this.setState({toggle: !this.state.toggle})
+    this.setState({ toggle: !this.state.toggle });
   };
 
   render() {
     const reviewsLength = this.state.reviews.length;
-    const toggleReviews = this.state.toggle ? classes.fadein : classes.fadeout;
+    const toggleReviews = this.state.toggle ? classes.show : classes.hide;
+
     return (
       <div className={classes.cardContainer}>
         <div className={classes.card}>
@@ -42,27 +42,31 @@ export default class card extends Component {
             images={this.props.hotel.images}
             alt={this.props.hotel.name}
           />
-          <InfoBox
-            hotel={this.props.hotel}
-            fetch={this.fetchReviews}
-          />
+          <InfoBox hotel={this.props.hotel} fetch={this.fetchReviews} />
         </div>
 
         <div className={`${classes.reviews} ${toggleReviews}`}>
-          {this.state.reviews.map((review, index) => {
-            const result = [];
-            result.push(
-              <Review
-                key={index}
-                positive={review.positive}
-                author={review.name}
-                comment={review.comment}
-              />
-            );
-
-            (index < reviewsLength - 1) ? result.push(<div className={classes.break} />) : null;
-            return result;
-          })}
+          {this.state.reviews.map(
+            (review, i) =>
+              i < reviewsLength - 1
+                ? [
+                    <Review
+                      key={i}
+                      positive={review.positive}
+                      author={review.name}
+                      comment={review.comment}
+                    />,
+                    <div className={classes.break} />
+                  ]
+                : [
+                    <Review
+                      key={i}
+                      positive={review.positive}
+                      author={review.name}
+                      comment={review.comment}
+                    />
+                  ]
+          )}
         </div>
       </div>
     );
