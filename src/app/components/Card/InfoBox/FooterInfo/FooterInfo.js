@@ -1,14 +1,23 @@
-import React from "react";
+import React, {Component} from "react";
 
 import Button from "../../../UI/Button/Button";
 
 import classes from "./FooterInfo.css";
 
-const footerInfo = ({ price, start, end, fetch }) => {
-  return (
+export default class footerInfo extends Component {
+  state = { buttonText : "Show Reviews"}
+
+  fetchAndToggle = () => {
+    fetch();
+    const text = this.state.buttonText !== "Show Reviews" ? "Hide Reviews" : "Show Reviews";
+  }
+
+ render () {
+   const { price, start, end, fetch } = this.props;
+    return (
     <footer className={classes.footerInfo}>
 
-        <Button text="Show Reviews" onClick={() => fetch()} />
+        <Button text={this.state.buttonText} onClick={this.fetchAndToggle} />
 
       <div className={classes.priceContainer}>
         <p className={classes.price}>{`${price} \u20ac`}</p>
@@ -16,6 +25,5 @@ const footerInfo = ({ price, start, end, fetch }) => {
       </div>
     </footer>
   );
+}
 };
-
-export default footerInfo;
