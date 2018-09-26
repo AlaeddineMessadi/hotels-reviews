@@ -4,15 +4,21 @@ import HeaderInfo from "./HeaderInfo/HeaderInfo";
 import FooterInfo from "./FooterInfo/FooterInfo";
 import classes from "./InfoBox.css";
 
-const InfoBox = props => {
+const InfoBox = ({ hotel, fetch }) => {
   return (
     <div className={classes.infoBox}>
-      <HeaderInfo title={props.title} city={props.city} rating={props.rating} />
-      <p className={classes.description}>{props.description}</p>
+      <HeaderInfo
+        name={hotel.name}
+        city={hotel.city}
+        country={hotel.country}
+        stars={hotel.stars}
+      />
+      <p className={classes.description}>{hotel.description}</p>
       <FooterInfo
-        fetch={props.fetch}
-        price={200}
-        date={new Date().toLocaleString("de-DE", { timeZone: "GMT" })}
+        fetch={fetch}
+        price={hotel.price}
+        start={hotel.date_start}
+        end={hotel.date_end}
       />
     </div>
   );

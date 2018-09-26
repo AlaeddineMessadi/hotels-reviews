@@ -11,7 +11,7 @@ export default class App extends Component {
   state = { hotels: [] };
 
   loadHotels = () => {
-    ApiService.get(`/hotels`, { count: 2 }, (status, data) => {
+    ApiService.get(`/hotels`, { count: 1 }, (status, data) => {
       this.setState({
         hotels:
           [

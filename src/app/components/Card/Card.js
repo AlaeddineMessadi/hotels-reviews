@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { calcStatus, parseRating } from "../../Utils/Utils";
 import ApiService from "../../services/ApiService";
-import Image from "./Image/Image";
+import Carousel from "../Slider/Carousel";
 import InfoBox from "./InfoBox/InfoBox";
 import Review from "./Review/Review";
 
@@ -38,15 +38,12 @@ export default class card extends Component {
     return (
       <div className={classes.cardContainer}>
         <div className={classes.card}>
-          <Image
-            images={[this.props.hotel.images[0]]}
+          <Carousel
+            images={this.props.hotel.images}
             alt={this.props.hotel.name}
           />
           <InfoBox
-            title={this.props.hotel.name}
-            city={this.props.hotel.city}
-            rating={parseRating(this.props.hotel.rating)}
-            description={this.props.hotel.description}
+            hotel={this.props.hotel}
             fetch={this.fetchReviews}
           />
         </div>

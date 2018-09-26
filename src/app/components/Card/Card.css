@@ -22,6 +22,9 @@
   border-bottom-left-radius: 5px;
   flex-basis: 100%;
   margin-top: -1px;
+  overflow:hidden;
+  transform: translateY(-100%);
+transition: .4s ease-in-out;
 }
 
 .break {
@@ -34,16 +37,38 @@
 }
 
 
-.fadein, .fadeout {
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
 .fadein {
-  opacity: 1;
+  transform: translateY(0);
 }
 
+/* .fadeout {
+  animation-name: fadeOut;
+}
 
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(auto);
+  } 
+  100% {
+      opacity: 1;
+      transform: translateY(0%);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+      transform: translateY(0%);
+  } 
+  100% {
+      opacity: 0;
+      transform: translateY(auto);
+  }
+} */
+
+
+@media only screen and (max-width: 768px) {
   .card {
     flex-wrap: wrap;
   }
