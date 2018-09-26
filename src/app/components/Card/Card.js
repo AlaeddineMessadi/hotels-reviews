@@ -9,27 +9,32 @@ import classes from "./Card.css";
 
 export default class card extends Component {
   state = {
-    reviews: []
+    reviews: [],
+    fetched: false,
+    toggle: false
   };
 
   fetchReviews = () => {
-    ApiService.get(
-      `/reviews`,
-      { hotel_id: this.props.hotel.id },
-      (status, data) => {
-        console.log(data);
+    if (!this.state.fetched) {
+      ApiService.get(
+        `/reviews`,
+        { hotel_id: this.props.hotel.id },
+        (status, data) => {
 
-        this.setState({
-          reviews: [...this.state.reviews, ...data]
-        });
-        console.log(this.state.reviews);
-      }
-    );
+          this.setState({
+            reviews: [...this.state.reviews, ...data],
+            fetched: true
+          });
+        }
+      );
+    }
+
+    this.setState({toggle: !this.state.toggle})
   };
 
   render() {
     const reviewsLength = this.state.reviews.length;
-    
+    const toggleReviews = this.state.toggle ? classes.fadein : classes.fadeout;
     return (
       <div className={classes.cardContainer}>
         <div className={classes.card}>
@@ -45,9 +50,9 @@ export default class card extends Component {
             fetch={this.fetchReviews}
           />
         </div>
-        <div className={classes.reviews}>
+
+        <div className={`${classes.reviews} ${toggleReviews}`}>
           {this.state.reviews.map((review, index) => {
-            console.log('index:', index, ' length: ', reviewsLength)
             const result = [];
             result.push(
               <Review
@@ -58,10 +63,7 @@ export default class card extends Component {
               />
             );
 
-            (index < reviewsLength-1)
-              ? result.push(<div className={classes.break} />)
-              : null;
-
+            (index < reviewsLength - 1) ? result.push(<div className={classes.break} />) : null;
             return result;
           })}
         </div>

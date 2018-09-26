@@ -1,7 +1,7 @@
 {
   "name": "hp-coding-challenge",
   "version": "1.0.0",
-  "description": "HolidayPirates Coding Challenge - Implement se*rch result list for hotels",
+  "description": "HolidayPirates Coding Challenge - Implement search result list for hotels",
   "main": "index.js",
   "author": "Alaeddine Messadi",
   "license": "MIT",

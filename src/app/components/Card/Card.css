@@ -33,6 +33,16 @@
   width: 90%;
 }
 
+
+.fadein, .fadeout {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.fadein {
+  opacity: 1;
+}
+
+
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .card {
     flex-wrap: wrap;
