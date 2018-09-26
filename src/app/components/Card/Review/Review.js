@@ -2,15 +2,16 @@ import React from 'react';
 
 import classes from './Review.css';
 
-const review = (props) => {
+const review = ({positive, author, comment}) => {
+  const sign = (positive) ? classes.plus : classes.minus;
   return (
     <div className={ classes.review }>
       <div>
-        <span className={ `${classes.sign} ${classes.minus}` }></span>
+        <span className={ `${classes.sign} ${sign}` }></span>
       </div>
       <div>
-        <h3>{ props.author }</h3>
-        <p>{ props.review }</p>
+        <h3>{ author }</h3>
+        <p>{ comment }</p>
       </div>
     </div>
   )

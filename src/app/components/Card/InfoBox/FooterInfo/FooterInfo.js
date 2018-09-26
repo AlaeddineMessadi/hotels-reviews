@@ -4,11 +4,11 @@ import Button from "../../../UI/Button/Button";
 
 import classes from "./FooterInfo.css";
 
-const footerInfo = ({ price, date, reviews }) => {
+const footerInfo = ({ price, date, fetch }) => {
   return (
     <footer className={classes.footerInfo}>
 
-        <Button text="Show Reviews" onClick={null} />
+        <Button text="Show Reviews" onClick={() => fetch()} />
 
       <div className={classes.priceContainer}>
         <p className={classes.price}>{`${price} \u20ac`}</p>

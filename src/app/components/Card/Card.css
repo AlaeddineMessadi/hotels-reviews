@@ -1,3 +1,9 @@
+.cardContainer {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
 .card {
   border: 1px solid #aaaaaa;
   border-radius: 5px;
@@ -5,7 +11,6 @@
   display: flex;
   flex-flow: row;
   align-items: stretch;
-  margin-bottom: 1rem;
 }
 
 .reviews {
@@ -16,6 +21,7 @@
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   flex-basis: 100%;
+  margin-top: -1px;
 }
 
 .break {
