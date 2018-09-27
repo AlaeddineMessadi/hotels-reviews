@@ -12,7 +12,11 @@ const config = {
   },
   module: {
     loaders: [
-      {exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/},
+      {
+        exclude: ["node_modules"],
+        loader: "babel",
+        test: /\.jsx?$/
+      },
       {
         test: /\.js?/,
         include: SRC_DIR,
@@ -32,7 +36,7 @@ const config = {
           modules: true,
           localIdentName: "[name]__[local]___[hash:base64:5]"
         }
-      },
+      }
     ]
   }
 };
