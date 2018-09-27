@@ -12,6 +12,7 @@ const config = {
   },
   module: {
     loaders: [
+      {exclude: ['node_modules'], loader: 'babel', test: /\.jsx?$/},
       {
         test: /\.js?/,
         include: SRC_DIR,

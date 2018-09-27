@@ -1,0 +1,18 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+
+import ErrorBoundary from "../../Utils/ErrorBoundary";
+import App from "./App";
+
+configure({ adapter: new Adapter() });
+
+it("renders without crashing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(
+        <App />,
+    div
+  );
+  ReactDOM.unmountComponentAtNode(div);
+});
