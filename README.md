@@ -12,7 +12,7 @@ Implement search result list for hotels
 
 [DEMO link](https://dist-ihhctrvagv.now.sh )
 
-Note: Regarding the images, the API returns images urls from http://lorempixel.com which is pretty slow to load.
+**Note:** Regarding the unloaded hotels images in the carousel, the API returns images' urls from http://lorempixel.com where their service is pretty slow and mostly no response.
 
 - Responsive design
 
