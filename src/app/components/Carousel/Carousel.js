@@ -8,6 +8,7 @@ import ImageSlide from "./ImageSlide/ImageSlide";
  * uncomment this section and change all "this.props.images" to IMAGE_URLS
  */
 import { IMAGE_URLS } from '../../Utils/Constants';
+import { secureImageUrl } from '../../Utils/Utils';
 
 // Styles
 import classes from "./Carousel.css";
@@ -53,7 +54,7 @@ export default class Carousel extends Component {
   render() {
     return (
       <div className={ classes.carousel }>
-        <ImageSlide url={ this.props.images[this.state.currentImageIndex] } />
+        <ImageSlide url={ secureImageUrl(this.props.images[this.state.currentImageIndex]) } />
         <Arrow
           direction="left"
           clickFunction={ this.previousSlide }

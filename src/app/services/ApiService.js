@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://fake-hotel-api.herokuapp.com/api';
+const BASE_URL = '//fake-hotel-api.herokuapp.com/api';
 
 /**
  * ApiService Class
