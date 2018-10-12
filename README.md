@@ -1,4 +1,4 @@
-# HolidayPirates Coding Challenge (React)
+# Hotels' Reviews (React)
 Implement search result list for hotels
 
 ## Description:
